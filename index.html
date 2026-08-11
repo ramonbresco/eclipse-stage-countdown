@@ -1735,9 +1735,19 @@
   /* ---------------------------- countdowns --------------------------- */
   var preview = null, previewUntil = 0;
 
+  /* Bootstrap tooltips trigger on "hover focus", and a click leaves focus on
+     the button, so the tooltip would stay up long after the preview ended.
+     Dismiss it explicitly; hover and keyboard focus still work as normal. */
+  function hideTip(el) {
+    if (!window.bootstrap || !window.bootstrap.Tooltip) return;
+    var tip = window.bootstrap.Tooltip.getInstance(el);
+    if (tip) tip.hide();
+  }
+
   strip.addEventListener("click", function (e) {
     var b = e.target.closest("button[data-i]");
     if (!b) return;
+    hideTip(b);
     preview = Number(b.dataset.i);
     previewUntil = Date.now() + PREVIEW_MS;
     render();
