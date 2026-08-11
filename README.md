@@ -17,8 +17,8 @@ server-side anything.
 
 | | Dark | Light |
 |---|---|---|
-| **Main page** | ![Main page, dark theme](docs/screenshots/main-dark.png) | ![Main page, light theme](docs/screenshots/main-light.png) |
-| **Observation spot** | ![Observation spot, dark theme](docs/screenshots/spot-dark.png) | ![Observation spot, light theme](docs/screenshots/spot-light.png) |
+| **Main page** | ![Main page, dark theme](main-page-dark-theme.png) | ![Main page, light theme](main-page-light-theme.png) |
+| **Observation spot** | ![Observation spot, dark theme](observation-spot-dark-theme.png) | ![Observation spot, light theme](observation-spot-light-theme.png) |
 
 ---
 
