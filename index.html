@@ -1825,20 +1825,24 @@
     var now = Date.now();
     var live = nextIndex(now);
     var main = live;
+    var previewing = false;
 
     if (preview !== null) {
       if (now < previewUntil) {
         main = preview;
-        previewBar.classList.remove("d-none");
-        previewBar.classList.add("d-flex");
+        previewing = true;
         pvName.textContent = t.names[preview];
         pvSecs.textContent = Math.ceil((previewUntil - now) / 1000);
       } else {
         preview = null;
-        previewBar.classList.add("d-none");
-        previewBar.classList.remove("d-flex");
       }
     }
+
+    /* Derive the banner from current state on every tick. Hiding it only on
+       the expiry transition left it stranded whenever preview was cleared
+       some other way, such as the "show current stage" button. */
+    previewBar.classList.toggle("d-none", !previewing);
+    previewBar.classList.toggle("d-flex", previewing);
 
     buttons.forEach(function (b, i) {
       b.classList.toggle("active", i === main);
