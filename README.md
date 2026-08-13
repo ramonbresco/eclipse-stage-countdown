@@ -13,8 +13,6 @@ server-side anything.
 
 ## Screenshots
 
-*To be added once the page is published.*
-
 | | Dark | Light |
 |---|---|---|
 | **Main page** | ![Main page, dark theme](main-page-dark-theme.png) | ![Main page, light theme](main-page-light-theme.png) |
@@ -51,7 +49,7 @@ A reload restores it, a bookmark preserves it, and a shared link reproduces
 someone else's exact setup. `history.replaceState` is wrapped in a `try` so a
 sandboxed frame degrades quietly instead of throwing.
 
-### The eight stages
+### The eclipse stages
 
 | # | Stage | Source |
 |---|---|---|
